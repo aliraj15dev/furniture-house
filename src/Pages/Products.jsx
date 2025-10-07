@@ -17,13 +17,13 @@ const Products = () => {
 
   return (
     <div className="max-w-9/10 mx-auto my-10 space-y-2">
-        <div className="flex justify-between">
+        <div className="flex flex-col sm:flex-row justify-between gap-3">
           <h1 className="text-2xl font-bold">All Product <span className="text-lg font-normal">Total ({searchedProduct.length}) Found</span></h1>
 
           <input onChange={handleSearchValue} value={searchValue} type="search" placeholder="Search Products" className="border-1 p-2 border-gray-400 rounded-xl"/>
 
         </div>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
         {searchedProduct.map((product) => (
           <Product key={product.id} product={product} />
         ))}

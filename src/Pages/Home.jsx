@@ -15,7 +15,7 @@ const Home = () => {
         <h1 className="text-2xl font-bold">Some Products</h1>
         <Link to='products'><button className="btn">Show All Product</button></Link>
       </div>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         {lessProducts.map((product) => (
           <Product key={product.id} product={product} />
         ))}
